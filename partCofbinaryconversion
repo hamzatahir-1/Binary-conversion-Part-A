@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class partCofbinaryconversion
+{
+    static String convertToBinaryString(int integernumber)
+{
+        int n = integernumber;
+        String binaryString = "";
+
+        if (n == 0)
+{
+            return "0";
+        }
+
+        while (n > 0)
+{
+            binaryString = (n % 2) + binaryString;
+            n = n / 2;
+        }
+
+        return binaryString;
+    }
+
+    public static void main(String[] args)
+{
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter an integer number: ");
+        int integernumber = input.nextInt();
+
+        String result = convertToBinaryString(number);
+
+        System.out.println("Binary of " + integernumber + " is: " + result);
+
+        input.close();
+    }
+}
